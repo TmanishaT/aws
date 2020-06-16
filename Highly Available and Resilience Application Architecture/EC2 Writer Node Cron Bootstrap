@@ -1,0 +1,5 @@
+#!/bin/bash
+yum update -y
+
+*/1 * * * * root aws s3 sync --delete /var/www/html s3://wordpress-code-storage 
+*/1 * * * * root aws s3 sync --delete /var/www/html/wp-content/uploads s3://wordpress-media-storage
